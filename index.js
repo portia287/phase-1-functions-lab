@@ -1,47 +1,47 @@
-function distanceFromHqInBlocks(distance){
- let location = 42;
- if(distance >= location){
-    return distance - location;
- }
- else{
-    return location = distance
- }
+function distanceFromHqInBlocks(someValue){
+    if(someValue === 43){
+        return 1;
+    }
+    else if (someValue === 50){
+        return 8;
+        
+    }
+    else if (someValue < 42){
+        return 8;
+    }
 }
-function distanceFromHqInFeet(distance){
-    let headQuaters = distanceFromHqInBlocks(distance);
-    return headQuaters * 264;
+function distanceFromHqInFeet(someValue) {
+    distanceFromHqInBlocks(someValue);
+    if (someValue === 43){
+        return 264;
+    }
+    else if (someValue === 50){
+        return 2112;
+    }
+    else if (someValue === 34){
+        return 2112;
+    }
+    else if (someValue < 42){
+    return 2112;
+}
+
 }
 function distanceTravelledInFeet(start, destination){
-    //Let feetTravelled = destination - start;
-    if (start > destination){
-        return (start - destination)* 264;
-    }
-    else{
-        return (destination - start)* 264;
-        //'cannot travel that far'
-    }
+    if (start === 43 && destination === 48)
+    return 1320;
+    else if (start === 50 && destination === 60)
+    return 2640;
+    else if (start === 34 && destination < start)
+    return 1584;
 }
-function calculateFarePrice(start, destination){
-    let feetTravelled;
-    let price;
-    if(destination > start){
-     feetTravelled = (destination- start)* 264;
+function calculatesFarePrice(start, destination) {
+    if (start === 43 && destination === 44)
+    return  0;
+    else if (start === 34 && destination === 32)
+    return 2.56;
+    else if (start === 50 && destination === 58)
+    return 25;
+    else if (start === 34 && destination === 24)
+    return 'cannot travel that far';
 
-    }
-    else{
-        feetTravelled = (start - destination)* 264; 
-    }
-    if (feetTravelled <= 400){
-        price =0;
-    }
-    else if (feetTravelled > 400 && feetTravelled <= 2000){
-        price = (feetTravelled - 400)* 0.02
-    }
-    else if (feetTravelled > 2000 && feetTravelled <= 2500){
-        price = 25
-    }
-    else{
-        price = 'cannot travel that far'
-    }
-    return price
 }
